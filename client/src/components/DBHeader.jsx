@@ -64,7 +64,6 @@ const DBHeader = () => {
 
           <motion.div
             onClick={signOut}
-            on
             className="w-10 h-10 rounded-md cursor-pointer bg-cardOverlay backdrop-blur-md shadow-md flex items-center justify-center"
           >
             <MdLogout className="text-gray-400 text-xl" />
