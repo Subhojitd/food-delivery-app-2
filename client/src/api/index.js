@@ -15,11 +15,41 @@ export const validateUserJWTToken = async (token) => {
 };
 
 //ad new product
-
 export const addNewProduct = async (data) => {
   try {
     const res = await axios.post(`${baseURL}/api/products/create`, { ...data });
-    console.log(res);
+    return res.data.data;
+  } catch (error) {
+    return null;
+  }
+};
+
+//getAllProducts
+export const getAllProducts = async () => {
+  try {
+    const res = await axios.get(`${baseURL}/api/products/all`);
+    return res.data.data;
+  } catch (error) {
+    return null;
+  }
+};
+
+//delete a product
+export const deleteAproduct = async (productId) => {
+  try {
+    const res = await axios.delete(
+      `${baseURL}/api/products/delete/${productId}`
+    );
+    return res.data.data;
+  } catch (error) {
+    return null;
+  }
+};
+
+//getAllUsers
+export const getAllUsers = async () => {
+  try {
+    const res = await axios.get(`${baseURL}/api/users/all`);
     return res.data.data;
   } catch (error) {
     return null;

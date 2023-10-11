@@ -17,7 +17,8 @@ import {
 } from "../context/actions/alertActions";
 import { buttonClick } from "../animations";
 import { MdDelete } from "react-icons/md";
-import { addNewProduct } from "../api";
+import { addNewProduct, getAllProducts } from "../api";
+import { setAllProducts } from "../context/actions/productAction";
 
 const DBNewItems = () => {
   const [itemName, setItemName] = useState("");
@@ -92,6 +93,9 @@ const DBNewItems = () => {
       setPrice("");
       setImageDownloadUrl(null);
       setCategory(null);
+    });
+    getAllProducts().then((data) => {
+      dispatch(setAllProducts(data));
     });
   };
   return (

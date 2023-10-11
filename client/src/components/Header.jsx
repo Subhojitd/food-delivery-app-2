@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { buttonClick, slideTop } from "../animations";
+import { Avatar } from "../assets/img/index";
 import { MdLogout, MdShoppingCart } from "../assets/icons";
 import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
 import { getAuth } from "firebase/auth";

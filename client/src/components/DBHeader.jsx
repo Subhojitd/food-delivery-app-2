@@ -4,6 +4,7 @@ import { BsFillBellFill, BsToggles2, MdLogout } from "../assets/icons";
 import { MdSearch } from "../assets/icons";
 import { useDispatch, useSelector } from "react-redux";
 import { buttonClick } from "../animations";
+import { Avatar } from "../assets/img/index";
 import { getAuth } from "firebase/auth";
 import { app } from "../config/firebase.config";
 import { useNavigate } from "react-router-dom";
@@ -56,7 +57,7 @@ const DBHeader = () => {
           <div className="w-10 h-10 rounded-md  shadow-md cursor-pointer overflow-hidden">
             <motion.img
               className="w-full h-full object-cover"
-              src={user?.picture ? user?.picture : "Avatar"}
+              src={user?.picture ? user?.picture : Avatar}
               whileHover={{ scale: 1.15 }}
               referrerPolicy="no-referrer"
             />
