@@ -29,3 +29,48 @@ export const statuses = [
     category: "bread",
   },
 ];
+
+export const randomData = [
+  {
+    id: 1,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+  {
+    id: 2,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+  {
+    id: 3,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+  {
+    id: 4,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+  {
+    id: 5,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+  {
+    id: 6,
+    imageURL: "https://5.imimg.com/data5/HX/OR/MY-3040698/dragon-fruit.jpg",
+    product_name: "Dragon Fruit",
+    product_category: "Fruits",
+    product_price: "₹20",
+  },
+];
