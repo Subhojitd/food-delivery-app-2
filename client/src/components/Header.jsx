@@ -108,12 +108,14 @@ const Header = () => {
                   onMouseLeave={() => setIsMenu(false)}
                   className="px-6 py-4 w-48 bg-cardOverlay backdrop-blur-md rounded-md shadow-md absolute top-12  right-0 flex flex-col gap-4"
                 >
-                  <Link
-                    to={"/dashboard/home"}
-                    className="hover:text-red-500 text-xl text-textColor"
-                  >
-                    Dashboard
-                  </Link>
+                  {user?.user_id === import.meta.env.VITE_FIREBASE_USER_ID && (
+                    <Link
+                      to={"/dashboard/home"}
+                      className="hover:text-red-500 text-xl text-textColor"
+                    >
+                      Dashboard
+                    </Link>
+                  )}
                   <Link
                     to={"/profile"}
                     className="hover:text-red-500 text-xl text-textColor"

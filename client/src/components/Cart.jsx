@@ -20,7 +20,7 @@ const Cart = () => {
 
   useEffect(() => {
     let tot = 0;
-    if (Cart) {
+    if (cart) {
       cart.map((data) => {
         tot = tot + data.product_price * data.quantity;
         setTotal(tot);
@@ -92,7 +92,9 @@ const Cart = () => {
           </>
         ) : (
           <>
-            <h1 className="text-3xl text-primary font-bold text-center"></h1>
+            <h1 className="text-3xl text-primary font-bold text-center">
+              Cart is Empty
+            </h1>
           </>
         )}
       </div>
@@ -132,7 +134,7 @@ export const CartItemCard = ({ index, data }) => {
   return (
     <motion.div
       key={index}
-      {...staggerFadeInOut}
+      {...staggerFadeInOut(index)}
       className=" w-full flex icon justify-start bg-zinc-800 rounded-md drop-shadow-md px-4 gap-4"
     >
       <img

@@ -8,7 +8,7 @@ import { app } from "./config/firebase.config";
 import { getAllCartItems, validateUserJWTToken } from "./api";
 import { setUserDetails } from "./context/actions/userActions";
 import { fadeInOut } from "./animations";
-import { Alert } from "./components";
+import { Alert, UsersOrders } from "./components";
 import { setCartItems } from "./context/actions/cartAction";
 import CheckOutSuccess from "./components/CheckOutSuccess";
 
@@ -26,7 +26,6 @@ function App() {
         cred.getIdToken().then((token) => {
           validateUserJWTToken(token).then((data) => {
             getAllCartItems(data.user_id).then((items) => {
-              console.log(items);
               dispatch(setCartItems(items));
             });
             dispatch(setUserDetails(data));
@@ -54,6 +53,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/checkout-success" element={<CheckOutSuccess />} />
+        <Route path="/user-orders" element={<UsersOrders />} />
       </Routes>
 
       {alert?.type && <Alert type={alert?.type} message={alert?.message} />}
