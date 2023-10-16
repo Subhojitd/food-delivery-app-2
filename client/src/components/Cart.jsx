@@ -47,7 +47,7 @@ const Cart = () => {
   return (
     <motion.div
       {...slideIn}
-      className="fixed z-50 top-0 right-0 w-300 md:w-508 bg-cardOverlay backdrop-blur-md shadow-md h-screen"
+      className="fixed z-50 top-0 right-0 w-300 md:w-508 bg-cardOverlay backdrop-blur-md shadow-md h-screen overflow-y-scroll scrollbar-none"
     >
       <div className=" w-full flex icon justify-between py-4 pb-12 px-6 ">
         <motion.i
@@ -55,9 +55,9 @@ const Cart = () => {
           className="cursor-pointer"
           onClick={() => dispatch(setCartOff())}
         >
-          <BiChevronsRight className="text-[50px] text-textColor" />
+          <BiChevronsRight className="text-[50px] text-orange-500" />
         </motion.i>
-        <p className="text-2xl text-headingColor font-semibold ">Your Cart</p>
+        <p className="text-3xl text-black font-semibold ">Your Cart</p>
         <motion.i {...buttonClick} className="cursor-pointer">
           <FcClearFilters className="text-[30px] text-textColor" />
         </motion.i>
@@ -74,7 +74,7 @@ const Cart = () => {
                 ))}
             </div>
             <div className="bg-zinc-800 rounded-t-[60px] w-full h-[35%] flex flex-col items-center justify-center px-4 py-6 gap-24">
-              <div className=" w-full flex icon justify-evenly">
+              <div className=" w-full flex items-center justify-evenly">
                 <p className="text-3xl text-zinc-500 font-semibold">Total</p>
                 <p className="text-3xl text-orange-500 fw-semibold ">
                   <span className="text-primary "> ₹ </span> {total}
@@ -83,7 +83,7 @@ const Cart = () => {
 
               <motion.button
                 {...buttonClick}
-                className="bg-orange-400 w-[70%] px-4 py-3 text-xl text-headingColor font-semibold hover:bg-orange-500 drop-shadow-md  rounded-2xl"
+                className="bg-orange-400 w-[70%] px-4 py-3 text-xl text-textColor font-semibold hover:bg-orange-500 drop-shadow-md  rounded-2xl"
                 onClick={handleCheckOut}
               >
                 Check Out
@@ -135,7 +135,7 @@ export const CartItemCard = ({ index, data }) => {
     <motion.div
       key={index}
       {...staggerFadeInOut(index)}
-      className=" w-full flex icon justify-start bg-zinc-800 rounded-md drop-shadow-md px-4 gap-4"
+      className=" w-full flex items-center justify-start bg-zinc-800 rounded-md drop-shadow-md px-4 gap-4"
     >
       <img
         src={data?.imageURL}
@@ -143,7 +143,7 @@ export const CartItemCard = ({ index, data }) => {
         alt=""
       />
 
-      <div className="flex icon justify-start gap-1 w-full">
+      <div className="flex items-center justify-start gap-1 w-full">
         <p className="text-lg  text-primary font-semibold">
           {data?.product_name}
           <span className="text-sm block capitalize text-gray-400">

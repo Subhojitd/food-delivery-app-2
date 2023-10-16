@@ -7,7 +7,7 @@ const HomeSlider = () => {
       <div className="w-full flex items-center justify-between">
         <div className="flex flex-col isolate justify-normal gap-1">
           <p className="text-2xl text-headingColor font-bold">
-            Our Fresh & Healthy Fruits
+            Our Bestselling Dishes
           </p>
           <div className="w-40 h-1 rounded-md bg-orange-500"></div>
         </div>

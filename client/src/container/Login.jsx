@@ -106,36 +106,26 @@ const Login = () => {
     }
   };
   return (
-    <div className=" w-screen h-screen relative overflow-hidden flex">
-      {/* Bg- Image */}
-      <img
-        className="w-full h-full object-cover absolute top-0 left-0 opacity-90 "
-        src="https://things2.do/blogs/wp-content/uploads/2023/03/Bengali-cuisine-cover.jpeg"
-        alt=""
-      />
+    <div className=" w-screen h-screen  overflow-hidden bg-gradient-to-br from-black to-gray-900 flex items-center justify-center">
       {/* Content Box */}
-      <div className="flex flex-col items-center bg-cardOverlay w-[80%]  md:w-508 h-full z-10 backdrop-blur-md p-4 px-4 py-12 gap-6">
+      <div className="flex flex-col items-center justify-center md:w-460  w-350 border-2 border-gray-600 rounded-2xl   h-[620px]   p-4 px-4 py-8 gap-3">
         {/* logo */}
-        <div className="flex items-center justify-start gap-4 w-full">
-          <h1>Logo</h1>
-          <p className=" text-headingColor font-semibold  text-2xl">
-            FoodyBong
-          </p>
-        </div>
+
+        <p className="text-center text-white  text-2xl">
+          Welcome to{" "}
+          <span className="font-logo text-orange-500 ">FoodyBong</span>
+        </p>
 
         {/* welcome tetxt  */}
-        <p className="text-3xl font-semibold text-headingColor">
-          Welcomne Back
-        </p>
-        <p className="text-xl text-textColor -mt-6">
-          {isSignUp ? "Sign Up" : "Sign In"}the following
+        <p className="text-xl text-gray-400 -mt-3">
+          {isSignUp ? "Sign Up" : "Log In"} here
         </p>
 
         {/* Input Section */}
         <div className="w-full flex flex-col items-center justify-center gap-6 px-4 md:px-12 py-4">
           <LoginInput
             placeholder={"Enter your Email"}
-            icon={<FaEnvelope className="text-xl text-textColor" />}
+            icon={<FaEnvelope className="text-xl text-orange-500" />}
             inputState={userEmail}
             inputStateFunc={setUserEmail}
             type="email"
@@ -143,7 +133,7 @@ const Login = () => {
           />
           <LoginInput
             placeholder={"Enter your Password"}
-            icon={<FaLock className="text-xl text-textColor" />}
+            icon={<FaLock className="text-xl text-orange-500" />}
             inputState={password}
             inputStateFunc={setPassword}
             type="password"
@@ -152,7 +142,7 @@ const Login = () => {
           {isSignUp && (
             <LoginInput
               placeholder={"Confirm Password"}
-              icon={<FaLock className="text-xl text-textColor" />}
+              icon={<FaLock className="text-xl text-orange-500" />}
               inputState={confirmPassword}
               inputStateFunc={setConfirmPassword}
               type="password"
@@ -161,10 +151,10 @@ const Login = () => {
           )}
 
           {!isSignUp ? (
-            <p>
+            <p className="text-gray-300">
               Doesn't have an account ?{" "}
               <motion.button
-                className="text-red-400 underline cursor-pointer bg-transparent"
+                className="text-orange-400 underline cursor-pointer bg-transparent"
                 {...buttonClick}
                 onClick={() => setIsSignUp(true)}
               >
@@ -173,10 +163,10 @@ const Login = () => {
               </motion.button>
             </p>
           ) : (
-            <p>
+            <p className="text-gray-300">
               Already have an account ?{" "}
               <motion.button
-                className="text-red-400 underline cursor-pointer bg-transparent"
+                className="text-orange-400 underline cursor-pointer bg-transparent"
                 {...buttonClick}
                 onClick={() => setIsSignUp(false)}
               >
@@ -191,7 +181,7 @@ const Login = () => {
             <motion.button
               {...buttonClick}
               onClick={signUpWithEmailPass}
-              className="w-full px-4 py-2 rounded-md bg-red-400 cursor-pointer text-white text-xl capitalize hover:bg-red-500 transition-all duration-150"
+              className="w-full px-4 py-2 rounded-md bg-orange-500 cursor-pointer text-white text-xl capitalize hover:bg-orange-700 transition-all duration-150"
             >
               Sign Up
             </motion.button>
@@ -199,7 +189,7 @@ const Login = () => {
             <motion.button
               {...buttonClick}
               onClick={signInWithEmailPass}
-              className="w-full px-4 py-2 rounded-md bg-red-400 cursor-pointer text-white text-xl capitalize hover:bg-red-500 transition-all duration-150"
+              className="w-full px-4 py-2 rounded-md bg-orange-500 cursor-pointer text-white text-xl capitalize hover:bg-orange-700 transition-all duration-150"
             >
               Sign In
             </motion.button>
@@ -220,9 +210,9 @@ const Login = () => {
           className="flex items-center justify-center px-20 py-2 bg-cardOverlay backdrop-blur-md cursor-pointer rounded-3xl gap-4"
         >
           <FcGoogle className="text-3xl" />
-          <p className=" capitalize text-base text-headingColor ">
+          <p className=" capitalize text-base text-textColor ">
             {" "}
-            Sign In using Google
+            Sign in with Google
           </p>
         </motion.div>
       </div>

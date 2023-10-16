@@ -28,29 +28,29 @@ const DBHeader = () => {
       });
   };
   return (
-    <div className="w-full flex items-center justify-between gap-3">
+    <div className="w-full flex  items-center justify-between gap-3">
       <p className="text-2xl text-headingColor">
         Welcome to FoodyBong,{" "}
         {user?.name && (
-          <span className="block text-base text-gray-500">{`Hello ${user?.name}...!`}</span>
+          <span className="block text-base text-textColor">{`Hello ${user?.name}...!`}</span>
         )}
       </p>
       <div className="flex items-center justify-center gap-4">
         <div className="flex items-center justify-center gap-3 px-4 py-2 bg-cardOverlay backdrop-blur-md rounded-md shadow-md">
-          <MdSearch className="text-2xl text-gray-400" />
+          <MdSearch className="text-2xl text-textColor" />
           <input
             type="text"
             placeholder="Search here.."
             className="border-none outline-none bg-transparent w-32 text-base font-semibold text-textColor"
           />
-          <BsToggles2 className="text-2xl text-gray-400" />
+          <BsToggles2 className="text-2xl text-textColor" />
         </div>
 
         <motion.div
           {...buttonClick}
           className="w-10 h-10 rounded-md cursor-pointer bg-cardOverlay backdrop-blur-md shadow-md flex items-center justify-center"
         >
-          <BsFillBellFill className="text-gray-400 text-xl" />
+          <BsFillBellFill className="text-textColor text-xl" />
         </motion.div>
 
         <div className="flex items-center justify-center gap-2">

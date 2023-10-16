@@ -9,17 +9,19 @@ const DBHome = () => {
   const products = useSelector((state) => state.products);
   const dispatch = useDispatch();
 
-  const drinks = products?.filter((item) => item.product_category === "drinks");
+  const biriyani = products?.filter(
+    (item) => item.product_category === "biriyani"
+  );
   const deserts = products?.filter(
     (item) => item.product_category === "deserts"
   );
-  const fruits = products?.filter((item) => item.product_category === "fruits");
-  const rice = products?.filter((item) => item.product_category === "rice");
-  const curry = products?.filter((item) => item.product_category === "curry");
+  const pizza = products?.filter((item) => item.product_category === "pizza");
+  const burger = products?.filter((item) => item.product_category === "burger");
+  const kababs = products?.filter((item) => item.product_category === "kababs");
   const chinese = products?.filter(
     (item) => item.product_category === "chinese"
   );
-  const bread = products?.filter((item) => item.product_category === "bread");
+  const veg = products?.filter((item) => item.product_category === "veg");
 
   useEffect(() => {
     if (!products) {
@@ -39,26 +41,26 @@ const DBHome = () => {
               type="bar"
               data={{
                 labels: [
-                  "drinks",
+                  "biriyani",
                   "deserts",
-                  "fruits",
-                  "rice",
-                  "curry",
+                  "pizza",
+                  "burger",
+                  "kababs",
                   "chinese",
-                  "bread",
+                  "veg",
                 ],
                 datasets: [
                   {
                     label: "Category Count",
                     backgroundColor: "#f87979",
                     data: [
-                      drinks?.length,
+                      biriyani?.length,
                       deserts?.length,
-                      fruits?.length,
-                      rice?.length,
-                      curry?.length,
+                      pizza?.length,
+                      burger?.length,
+                      kababs?.length,
                       chinese?.length,
-                      bread?.length,
+                      veg?.length,
                     ],
                   },
                 ],

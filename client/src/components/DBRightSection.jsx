@@ -11,7 +11,7 @@ import { Route, Routes } from "react-router-dom";
 
 const DBRightSection = () => {
   return (
-    <div className="flex flex-col p-12 flex-1 h-full">
+    <div className="flex flex-col bg-gradient-to-br from-black to-gray-900 p-12 flex-1 h-full">
       <DBHeader />
       <div
         className="flex flex-col flex-1 overflow-y-scroll

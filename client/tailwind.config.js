@@ -45,8 +45,8 @@ export default {
         "2xl": "1536px",
       },
       colors: {
-        headingColor: "#2e2e2e",
-        textColor: "#515151",
+        headingColor: "#6b7280",
+        textColor: "#d1d5db",
         cartNumBg: "#e80013",
         primary: "#f5f3f3",
         cardOverlay: "rgba(256,256,256,0.4)",
@@ -56,6 +56,9 @@ export default {
         cartItem: "#2e3033",
         cartTotal: "#343739",
       },
+    },
+    fontFamily: {
+      logo: ["Barriecito"],
     },
   },
   plugins: [require("tailwind-scrollbar")],

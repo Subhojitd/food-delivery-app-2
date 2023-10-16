@@ -3,9 +3,9 @@ import { NavLink } from "react-router-dom";
 import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
 const DBLeftSection = () => {
   return (
-    <div className="h-full pt-12 flex flex-col  bg-cardOverlay backdrop-blur-md  shadow-md min-w-210 w-300 gap-3">
-      <NavLink to={"/"} className="flex items-center justify-start px-6 gap-4">
-        <h1>Logo</h1>
+    <div className="h-full pt-12 flex flex-col  bg-gradient-to-br from-black to-gray-900 backdrop-blur-md  shadow-md min-w-210 w-300 gap-3">
+      <NavLink to={"/"} className="flex items-center justify-center gap-4">
+        <h1 className="text-4xl font-logo text-orange-500">Foody Bong</h1>
       </NavLink>
       <hr />
 

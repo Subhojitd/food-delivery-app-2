@@ -11,6 +11,9 @@ import { fadeInOut } from "./animations";
 import { Alert, UsersOrders } from "./components";
 import { setCartItems } from "./context/actions/cartAction";
 import CheckOutSuccess from "./components/CheckOutSuccess";
+import ServicePage from "./container/ServicePage";
+import AboutUsPage from "./container/ContactPage";
+import ContactPage from "./container/ContactPage";
 
 function App() {
   const fireBaseAuth = getAuth(app);
@@ -54,6 +57,8 @@ function App() {
         <Route path="/dashboard/*" element={<Dashboard />} />
         <Route path="/checkout-success" element={<CheckOutSuccess />} />
         <Route path="/user-orders" element={<UsersOrders />} />
+        <Route path="/services" element={<ServicePage />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       {alert?.type && <Alert type={alert?.type} message={alert?.message} />}
