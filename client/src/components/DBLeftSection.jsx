@@ -1,11 +1,17 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
+import { IoFastFoodOutline } from "react-icons/io5";
 const DBLeftSection = () => {
   return (
     <div className="h-full pt-12 flex flex-col  bg-gradient-to-br from-black to-gray-900 backdrop-blur-md  shadow-md min-w-210 w-300 gap-3">
       <NavLink to={"/"} className="flex items-center justify-center gap-4">
-        <h1 className="text-4xl font-logo text-orange-500">Foody Bong</h1>
+        <h1 className="text-3xl md:text-4xl  flex items-center justify-center gap-2 font-logo text-orange-500">
+          Foody Bong{" "}
+          <span>
+            <IoFastFoodOutline />
+          </span>
+        </h1>
       </NavLink>
       <hr />
 
@@ -13,7 +19,7 @@ const DBLeftSection = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? `${isActiveStyles} px-4 py-2 border-l-8 border-red-500`
+              ? `${isActiveStyles} px-4 py-2 bg-gray-700 border-l-8 border-red-500`
               : isNotActiveStyles
           }
           to={"/dashboard/home"}
@@ -23,7 +29,7 @@ const DBLeftSection = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? `${isActiveStyles} px-4 py-2 border-l-8 border-red-500`
+              ? `${isActiveStyles} px-4 py-2 bg-gray-700 border-l-8 border-red-500`
               : isNotActiveStyles
           }
           to={"/dashboard/orders"}
@@ -33,7 +39,7 @@ const DBLeftSection = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? `${isActiveStyles} px-4 py-2 border-l-8 border-red-500`
+              ? `${isActiveStyles} px-4 py-2 bg-gray-700 border-l-8 border-red-500`
               : isNotActiveStyles
           }
           to={"/dashboard/items"}
@@ -43,7 +49,7 @@ const DBLeftSection = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? `${isActiveStyles} px-4 py-2 border-l-8 border-red-500`
+              ? `${isActiveStyles} px-4 py-2 bg-gray-700 border-l-8 border-red-500`
               : isNotActiveStyles
           }
           to={"/dashboard/newitems"}
@@ -53,7 +59,7 @@ const DBLeftSection = () => {
         <NavLink
           className={({ isActive }) =>
             isActive
-              ? `${isActiveStyles} px-4 py-2 border-l-8 border-red-500`
+              ? `${isActiveStyles} px-4 py-2 bg-gray-700 border-l-8 border-red-500`
               : isNotActiveStyles
           }
           to={"/dashboard/users"}
@@ -61,21 +67,6 @@ const DBLeftSection = () => {
           Users
         </NavLink>
       </ul>
-
-      <div className="w-full items-center justify-center flex h-225 mt-auto mb-2 px-2">
-        <div className="w-full h-full rounded-md bg-red-400 flex items-center justify-center flex-col gap-3 px-3">
-          <div className="w-12 h-12 border bg-white rounded-full flex items-center justify-center">
-            <p className="text-2xl font-bold text-red-500 ">?</p>
-          </div>
-          <p className="text-xl text-primary font-semibold">Help Center</p>
-          <p className="text-base text-gray-300 text-center">
-            Having Trouble in city, Please contact us for more Questions
-          </p>
-          <p className="px-4 py-2 rounded-full bg-primary text-red-400 cursor-pointer">
-            Get in Touch
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

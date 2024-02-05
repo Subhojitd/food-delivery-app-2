@@ -12,8 +12,8 @@ import { Alert, UsersOrders } from "./components";
 import { setCartItems } from "./context/actions/cartAction";
 import CheckOutSuccess from "./components/CheckOutSuccess";
 import ServicePage from "./container/ServicePage";
-import AboutUsPage from "./container/ContactPage";
 import ContactPage from "./container/ContactPage";
+import { Hourglass } from "react-loader-spinner";
 
 function App() {
   const fireBaseAuth = getAuth(app);
@@ -48,7 +48,15 @@ function App() {
           {...fadeInOut}
           className="fixed z-50 inset-0 bg-cardOverlay backdrop-blur-md flex items-center justify-center w-full"
         >
-          loading....
+          <Hourglass
+            visible={true}
+            height="80"
+            width="80"
+            ariaLabel="hourglass-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+            colors={["#306cce", "#72a1ed"]}
+          />
         </motion.div>
       )}
       <Routes>

@@ -113,8 +113,10 @@ const DBNewItems = () => {
               <p
                 key={data.id}
                 onClick={() => setCategory(data.category)}
-                className={`px-4 py-3 rounded-md text-xl text-textColor font-semibold cursor-pointer hover:shadow-md border border-gray-200 backdrop-blur-md ${
-                  data.category === category ? "bg-red-400" : "bg-transparent"
+                className={`px-4 py-3 rounded-md text-xl text-white font-semibold cursor-pointer hover:shadow-md border border-gray-200 backdrop-blur-md ${
+                  data.category === category
+                    ? "bg-orange-400"
+                    : "bg-transparent"
                 }`}
               >
                 {data.title}
@@ -165,7 +167,7 @@ const DBNewItems = () => {
                         <p className="font-bold text-4xl ">
                           <FaCloudUploadAlt className="-rotate-0" />
                         </p>
-                        <p className="text-lg text-textColor">
+                        <p className="text-lg text-black">
                           Click to Upload Image
                         </p>
                       </div>
@@ -227,7 +229,7 @@ export const InputValueField = ({
         placeholder={placeholder}
         value={statevalue}
         onChange={(e) => statFunc(e.target.value)}
-        className=" w-full px-4 py-3 bg-cardOverlay shadow-md outline-none rounded-md border-collapse border-gray-200 focus:border-red-400"
+        className=" w-full px-4 py-3 bg-cardOverlay text-white shadow-md outline-none rounded-md border-collapse border-gray-200 focus:border-red-400"
       />
     </>
   );

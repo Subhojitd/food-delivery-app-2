@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
 import { buttonClick, slideTop } from "../animations";
-import { Avatar } from "../assets/img/index";
+import { Avatar, LocationIcon } from "../assets/img/index";
 import { MdLogout, MdShoppingCart } from "../assets/icons";
 import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
 import { getAuth } from "firebase/auth";
@@ -12,6 +12,8 @@ import { useNavigate } from "react-router-dom";
 import { setUserNull } from "../context/actions/userActions";
 import { setCartOn } from "../context/actions/displayCartAction";
 import { IoFastFoodOutline } from "react-icons/io5";
+import Location from "./Location";
+import LocationOn from "@mui/icons-material/LocationOn";
 const Header = () => {
   const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
@@ -41,6 +43,10 @@ const Header = () => {
             <IoFastFoodOutline />
           </span>
         </h1>
+        <div className="flex items-center justify-center gap-3">
+          <img src={LocationIcon} className="w-8" alt="" />
+          <Location />
+        </div>
       </NavLink>
       <nav className="flex items-center justify-center gap-8">
         <ul className="hidden md:flex items-center justify-center gap-16">

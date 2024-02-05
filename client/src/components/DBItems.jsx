@@ -34,8 +34,8 @@ const DBItems = () => {
             title: "Price",
             field: "product_price",
             render: (rowData) => (
-              <p className="text-2xl font-semibold text-textColor flex items-center justify-center gap-1">
-                <HiCurrencyRupee className="text-red-400" />
+              <p className="text-2xl font-semibold text-black flex items-center justify-center gap-1">
+                <HiCurrencyRupee className="text-red-500" />
                 {parseFloat(rowData.product_price).toFixed(2)}
               </p>
             ),

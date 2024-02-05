@@ -12,6 +12,7 @@ import { useSelector } from "react-redux";
 import { getAllCartItems, increaseQuantity } from "../api";
 import { alertNull, alertSuccess } from "../context/actions/alertActions";
 import axios from "axios";
+import { EmptyCart } from "../assets/img";
 const Cart = () => {
   const dispatch = useDispatch();
   const cart = useSelector((state) => state.cart);
@@ -92,9 +93,12 @@ const Cart = () => {
           </>
         ) : (
           <>
-            <h1 className="text-3xl text-primary font-bold text-center">
-              Cart is Empty
-            </h1>
+            <div className="w-full h-full flex flex-col items-center justify-center gap-3">
+              <img src={EmptyCart} className="w-[100px]  " alt="" />
+              <h1 className="text-3xl text-primary font-bold text-center">
+                Your Cart is Empty 😕
+              </h1>
+            </div>
           </>
         )}
       </div>
